@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+// Base class
+class Animal
+{
+public:
+    void sound()
+    {
+        cout << "Animal makes a sound." << endl;
+    }
+};
+
+// Derived class
+class Dog : public Animal
+{
+public:
+    // Function overriding
+    void sound()
+    {
+        cout << "Dog barks." << endl;
+    }
+};
+
+int main()
+{
+    Animal animal;
+    Dog dog;
+
+    cout << "Base class function:" << endl;
+    animal.sound();
+
+    cout << "Derived class function:" << endl;
+    dog.sound();
+
+    return 0;
+}
